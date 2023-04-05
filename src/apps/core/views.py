@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def home(request):
     return HttpResponse('<h2>Aceasta este pagina principala</h2>')
+
+def despre(request):
+    return HttpResponse('<h2>Despre aplicatie</h2>')
