@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def produse(request):
-    return HttpResponse('<h2>Lista de cumparaturi</h2>')
+def home(request):
+    return HttpResponse('<h2>Aceasta este pagina principala</h2>')
