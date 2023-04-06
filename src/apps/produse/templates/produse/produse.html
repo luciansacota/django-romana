@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
+{% extends 'core/base.html' %}
+
+
+{% block header %}
+    Produse
+{% endblock header %}
+    
+{% block title %}
+    Lista de produse
+{% endblock title %}
+    
+{% block content %}
     <h2>Lista de produse:</h2>
     <table style="width: 85%;" align="center">
         <thead>
@@ -33,5 +31,4 @@
             {% endif %}
         </tbody>
     </table>
-</body>
-</html>
+{% endblock content %}
