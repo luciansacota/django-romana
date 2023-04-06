@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h2>Lista de produse</h2>
+    <h2>Lista de produse:</h2>
+    <table style="width: 85%;" align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PRODUS</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if products %}
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>{{ product.nume }}</td>
+                        <td>{{ product.cumparat }}</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
 </body>
 </html>
