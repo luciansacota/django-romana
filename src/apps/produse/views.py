@@ -4,4 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def produse(request):
-    return HttpResponse('<h2>Lista de cumparaturi</h2>')
+    context = {
+        
+    }
+    return render(request, 'produse/produse.html', context)

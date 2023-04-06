@@ -4,7 +4,13 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('<h2>Aceasta este pagina principala</h2>')
+    context = {
+        
+    }
+    return render(request, 'core/home.html', context)
 
-def despre(request):
-    return HttpResponse('<h2>Despre aplicatie</h2>')
+def about(request):
+    context = {
+        
+    }
+    return render(request, 'core/about.html', context)
