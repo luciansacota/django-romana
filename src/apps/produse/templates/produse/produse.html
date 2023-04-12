@@ -1,33 +1,39 @@
-{% extends 'core/base.html' %}
+{% extends 'core/base.html' %} {% block header %} Produse {% endblock header %}
+{% block title %} Lista de produse: {% endblock title %} {% block content %}
+<table style="width: 85%" align="center">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>PRODUS</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if products %} {% for product in products %}
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.nume }}</td>
+      <td>{{ product.cumparat }}</td>
+    </tr>
+    {% endfor %} {% endif %}
+  </tbody>
+</table>
 
+<!-- formularul de introducere produse -->
+<form id="form">
+  <div class="mb-3">
+    <label for="produs" class="form-label">Produs</label>
+    <input
+      type="text"
+      class="form-control"
+      style="width: 85%;"
+    />
+    <div id="descriereActiune" class="form-text">
+      Introduceti aici produsul pentru a-l adauga la lista.
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-dark">Adauga</button>
+</form>
 
-{% block header %}
-    Produse
-{% endblock header %}
-    
-{% block title %}
-    Lista de produse:
-{% endblock title %}
-    
-{% block content %}
-    <table style="width: 85%;" align="center">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>PRODUS</th>
-                <th>STATUS</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% if products %}
-                {% for product in products %}
-                    <tr>
-                        <td>{{ product.id }}</td>
-                        <td>{{ product.nume }}</td>
-                        <td>{{ product.cumparat }}</td>
-                    </tr>
-                {% endfor %}
-            {% endif %}
-        </tbody>
-    </table>
 {% endblock content %}

@@ -1,3 +1,18 @@
+body {
+    margin:0px 0px; 
+    padding:0px;
+    text-align:justify;
+}
+
 table, th, td {
     border: 1px solid black;
+}
+
+td {
+    text-align: left;
+}
+
+input {
+    width: 65px;
+    align-self: center;
 }
