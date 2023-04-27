@@ -1,5 +1,5 @@
 body {
-    margin:0px 0px; 
+    margin:5px 5px; 
     padding:0px;
     text-align:justify;
 }
@@ -10,6 +10,10 @@ table, th, td {
 
 td {
     text-align: left;
+}
+
+th {
+    text-align: center;
 }
 
 input {
